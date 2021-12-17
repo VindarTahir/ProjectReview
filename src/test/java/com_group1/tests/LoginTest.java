@@ -29,8 +29,10 @@ public class LoginTest extends TestBase {
         System.out.println(homePage.getInfo("Users"));
 
         homePage.books.click();
-        wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.elementToBeClickable(homePage.dashboard));
+//        wait = new WebDriverWait(driver, 10);
+//        wait.until(ExpectedConditions.elementToBeClickable(homePage.dashboard));
+        waitClick(homePage.dashboard, 10);
+
         homePage.dashboard.click();
     }
 

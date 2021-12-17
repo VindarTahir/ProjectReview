@@ -6,8 +6,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BrowserUtils {
 
+    static WebDriverWait wait;
+
     public static void waitClick(WebElement element, int seconds){
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), seconds);
+        wait = new WebDriverWait(Driver.getDriver(), seconds);
         wait.until(ExpectedConditions.elementToBeClickable(element));
     }
 
